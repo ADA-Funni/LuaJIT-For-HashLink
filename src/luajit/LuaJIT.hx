@@ -1,4 +1,4 @@
-package project;
+package luajit;
 
 private typedef LuaJITState = hl.Abstract<"lua_State">;
 

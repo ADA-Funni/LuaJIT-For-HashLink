@@ -1,6 +1,6 @@
 package;
 
-import project.LuaJIT;
+import luajit.LuaJIT;
 
 class Main {
     static function main() {
