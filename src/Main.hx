@@ -1,8 +1,15 @@
 package;
 
+import project.LuaJIT;
+
 class Main {
     static function main() {
-        var e = project.Extern.hello_world('Hello World from hlNative!');
-        trace(e);
+        var l = LuaJIT.newstate();
+        LuaJIT.openlibs(l);
+
+        LuaJIT.dostring(l, 'print("hello world")');
+
+        LuaJIT.close(l);
+        trace(LuaJIT.VERSION());
     }
 }

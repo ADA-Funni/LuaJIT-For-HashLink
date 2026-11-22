@@ -9,6 +9,7 @@ add_library(${CMAKE_PROJECT_NAME} SHARED fuckyou.cpp)
 target_link_libraries(${CMAKE_PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/lib/lib/Windows/lua51.lib)
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/lib/include")
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE "${HASHLINK_PATH}/include")
+target_link_libraries(${CMAKE_PROJECT_NAME} ${HASHLINK_PATH}/libhl.lib)
 
 # Give HashLink our HDLL
 add_custom_command(
